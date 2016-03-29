@@ -87,3 +87,11 @@ Odpowiedz:
   3. Ma implementowaæ statyczne metody: stworzenie nowej odpowiedzi (potrzebuje podania id pytania), wczytanie odpowiedzi o podanym id z bazy danych, usuniêcie odpowiedzi o podanym id z bazy danych.
 
 Testy maj¹ byæ pisane z u¿yciem ³adowania odpowiednych fikstur do baz danych, maj¹ byæ utworzone 4 grupy testowe: po jednej na ka¿d¹ klasê i jedna testuj¹ca wszystko.
+
+
+<!-- Links -->
+[forking]: https://guides.github.com/activities/forking/
+[ref-clone]: http://gitref.org/creating/#clone
+[ref-commit]: http://gitref.org/basic/#commit
+[ref-push]: http://gitref.org/remotes/#push
+[pull-request]: https://help.github.com/articles/creating-a-pull-request
