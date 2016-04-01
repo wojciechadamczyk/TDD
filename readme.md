@@ -26,7 +26,7 @@ Ilość punktów to zazwyczaj suma zbitych kręgli. Jednak jeżeli ktoś zbije w
   2. Ilość punktów z rzutu po strike równa się: ilość punktów tego rzutu + ilość punktów z nastepnego rzutu.
 
 Czyli:
-Zakadajc że gracz w pierwszym rzucie trafi strike, w drugim trafi 5 krgi a w trzecim trafi 7 krgli punktacja bdziewygldać tak:
+Zakadajc że gracz w pierwszym rzucie trafi strike, w drugim trafi 5 kręgli a w trzecim trafi 7 kręgli punktacja bdziewygldać tak:
   1. Pierwszy rzut: 10 + 5 + 7 = 22 ptk
   2. Drugi rzut: 5 + 7 = 12 ptk
   3. Trzeci rzut 5 ptk
