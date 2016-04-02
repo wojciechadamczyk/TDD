@@ -16,7 +16,7 @@ Każde zadanie powinno być rozwiązane w swoim folderze.
 ## Ćwiczenia do zrobienia z wykładowcą
 
 ### Ćwiczenie 1 - Zamiana liczb na napisy
-Napisz funkcję która zamieni liczbę na zapis słowny tej liczby. Np. 15143 zamieni na „piętnaście tysięcy sto czterdzieści trzy”. Liczby mają być w zakresie do miliona (ale bez miliona).
+Napisz funkcję która zamieni liczbę na zapis słowny tej liczby. Np. 143 zamieni na „sto czterdzieści trzy”. Liczby mają być w zakresie do tysiąca (ale bez tysiąca).
 Napisz testy do tej funkcji.
 
 ### Ćwiczenie 2 - Kręgle
