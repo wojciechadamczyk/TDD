@@ -1,100 +1,127 @@
-# PHP - TDD - Ćwiczenia 
+# Zaawansowane PHP &ndash; TDD
+
 
 ## Jak rozwiązywać zadania?
 
-Żeby rozwiązać zadania musisz wykonać następujące kroki:
+Wykonaj następujące kroki:
 
-1. Żeby zacząć, stwórz tak zwany [**fork**][forking] repozytorium z zadaniami.
-1. Następnie [**sklonuj**][ref-clone] repozytorium na swój komputer.
-1. Rozwiąż zadania i [**skomituj**][ref-commit] zmiany do swojego repozytorium.
-1. [**Wypchnij**][ref-push] zmiany na swoje repozytorium na GitHubie.
-1. [Stwórz **pull request**][pull-request] do oryginalnego repozytorium kiedy skończysz wszystkie ćwiczenia.
+1. Stwórz [**fork**][forking] repozytorium z zadaniami.
+2. [**Sklonuj**][ref-clone] repozytorium na swój komputer.
+3. Rozwiąż zadania i [**skomituj**][ref-commit] zmiany do swojego repozytorium.
+4. [**Wypchnij**][ref-push] zmiany do swojego repozytorium na GitHubie.
+5. Stwórz [**pull request**][pull-request] do oryginalnego repozytorium, gdy skończysz wszystkie zadania.
 
 
-Każde zadanie powinno być rozwiązane w swoim folderze. 
+**Każde zadanie powinno być rozwiązane w osobnym pliku**.
 
-## Ćwiczenia do zrobienia z wykładowcą
+## Cześć A &ndash; zadania rozwiązywane z wykładowcą
 
-### Ćwiczenie 1 - Zamiana liczb na napisy
-Napisz funkcję która zamieni liczbę na zapis słowny tej liczby. Np. 143 zamieni na „sto czterdzieści trzy”. Liczby mają być w zakresie do tysiąca (ale bez tysiąca).
+### Zadanie A1 &ndash; zamiana liczb na napisy
+Napisz funkcję zamieniającą liczbę na zapis słowny tej liczby. Np. 143 zamieni na „sto czterdzieści trzy”. Liczby mają być w zakresie do tysiąca (ale bez tysiąca).
 Napisz testy do tej funkcji.
 
-### Ćwiczenie 2 - Kręgle
-Zadaniem jest napisanie klasy o nazwie ```BowlingGame``` która ma służyć do podliczania wyników w grze w kręgle.
+### Zadanie A2 &ndash; kręgle
+Napisz klasę o nazwie ```BowlingGame``` służącą do podliczania wyników w grze w kręgle.
 Klasa ma mieć co najmniej dwie funkcje:
-  1. ```roll(pins)``` - funkcja która jest używana za każdym razem kiedy gracz rzuca,
-  2. ```score()``` - funkcja która zwraca ilość punktów uzyskanych do tej pory.
-  
-Zadady jakie muszą być spełnione:
-  1. Gra w kręgle składa się z 10 ramek. Każda ramka składa się z dwóch rzutów w których można uzyskać maksymalnie 10 punktów (tyle ile jest kręgli na torze). Ilość punktów z ramki to ilośc zbitych kręgli + bonusy za strike i spare,
-  2. Spare - jest to przypadek w którym gracz zbija wszystkie 10 kręgli w dwóch rzutach nalerzących do jednej ramki. Wtedy do punktów z tej ramki są doliczne punkty z następnego rzutu (pierwszego rzutu następnej ramki).
+  1. ```roll(pins)``` &ndash; funkcja używana, gdy gracz rzuca,
+  2. ```score()``` &ndash; funkcja zwracająca liczbę punktów uzyskanych do tej pory.
+
+Zasady, które muszą być spełnione:
+  1. Gra w kręgle składa się z 10 ramek.
+  2. Każda ramka składa się z dwóch rzutów, w których można uzyskać maksymalnie 10 punktów (tyle jest kręgli na torze).
+  3. Liczba punktów z ramki to liczba zbitych kręgli + bonusy za strike i spare.
+  2. Spare &ndash; gracz zbija wszystkie 10 kręgli w dwóch rzutach należących do jednej ramki. Wtedy do punktów z tej ramki są doliczane punkty z następnego rzutu (pierwszego rzutu następnej ramki).
   Np: W pierwszej ramce gracz rzucił 6 i 4. W kolejnej ramce rzucił 3 i 5. Punktacja za pierwszą ramkę to 13 (6 + 4 + 3), punktacja za drugą ramkę to 8.
-  3. Strike - jest to przypadek w którym gracz zbija wszystkie kręgle za pierwszym rzutem nalerzącym do ramki (nie ma drugiego rzutu w tej ramce). W takim przypadku to wyniku z tej ramki dodawane są punkty z kolejnych dwóch rzutów. Np: W pierwszej ramce gracz rzucił 10. W kolejnej ramce rzucił 3 i 5. Punktacja za pierwszą ramkę to 17 (10 + 3 + 5), punktacja za drugą ramkę to 8.
-  4. Jeżeli w ostatniej ramce gracz wyrzucił strike albo spare to przysługują mu dodatkowe rzuty (ale nie więcej niż 3).
-  
-Dla upewnienia się jak powinien działać taki program możecie zajrzeć tutaj: http://www.bowlinggenius.com/
+  3. Strike &ndash; gracz zbija wszystkie kręgle za pierwszym rzutem należącym do ramki (nie ma drugiego rzutu w tej ramce). W takim przypadku do wyniku z tej ramki dodawane są punkty z kolejnych dwóch rzutów. Np: W pierwszej ramce gracz rzucił 10. W kolejnej &ndash; 3 i 5. Punktacja za pierwszą ramkę to 17 (10 + 3 + 5), punktacja za drugą ramkę to 8.
+  4. Jeżeli w ostatniej ramce gracz rzucił strike albo spare, to przysługują mu dodatkowe rzuty (ale nie więcej niż trzy).
 
-Przed napisaniem klasy najpierw stwórz następujące test-casy:
-  1. Wszystkie rzuty zbiły 0 kręgli - suma punktów powinna być 0,
-  2. Wszystkie rzuty zbijają po jednym kręglu - suma punktów powinna być 10,
-  3. Strike w pierwszym rzucie, nastepnie 3 zbite a potem wszystkie pudła - suma punktów powinna być 16,
-  4. Strike w pierwszym rzucie, nastepnie 3 zbite kręgle, następnie 4 zbite kręgle a potem wszystkie pudła - suma punktów powinna być 24,
-  5. Spare w pierwszej ramce (obojętnie jak zdobyty), potem w nastepnym rzucie 4, następnie 3 i reszta same pudła. Suma punktów powinna wynosić 21.
-  6. Gra perfekcyjna (10 x strike).
+Tu upewnisz się, jak powinien działać taki program: [tutaj](http://www.bowlinggenius.com/).
 
-### Ćwiczenie 3 - Klasa User
-Napisz klasę User. Klasa ma implementować nastepujące funkcjonalności:
+Przed napisaniem klasy stwórz następujące przypadki testowe (ang. test case):
+  1. Wszystkie rzuty zbiły 0 kręgli &ndash; suma punktów powinna być 0.
+  2. Wszystkie rzuty zbijają po jednym kręglu  &ndash; suma punktów powinna być 10.
+  3. Strike w pierwszym rzucie, następnie 0 zbitych, a potem wszystkie pudła  &ndash; suma punktów powinna być 16.
+  4. Strike w pierwszym rzucie, następnie 3 zbite kręgle, następnie 4 zbite kręgle, a potem wszystkie pudła &ndash; suma punktów powinna wynosić 24.
+  5. Spare w pierwszej ramce (obojętnie jak zdobyty), potem w następnym rzucie 4, następnie 3 i reszta same pudła. Suma punktów powinna wynosić 21.
+  6. Gra perfekcyjna (10 razy strike).
+
+### Zadanie A3 &ndash; klasa User
+Napisz klasę `User` implementującą następujące funkcjonalności:
   1. Rejestracje użytkownika.
-  2. Logowanie,
-  3. Edycję danych (łącznie ze zmianą hasła)
+  2. Logowanie.
+  3. Edycję danych (łącznie ze zmianą hasła).
   4. Wczytanie i zapamiętanie do bazy danych.
-  
-Napisz to zadanie używając w pełni metodologii TDD. Pamiętaj o testowaniu danych wczytanych z fikstur. 
 
-## Ćwiczenia samodzielne
+Napisz to zadanie, używając w pełni metodologii TDD. Pamiętaj o testowaniu danych wczytanych z fikstur.
 
-### Ćwiczenie 1 - FizzBuzz
-Napisz znaną już wam funkcje który przyjmuje liczbę całkowitą a napis stworzony z liczb od 1 do podanej liczby zamieniając:
-  1. Liczby podzielne przez 3 na Fizz,
-  2. Liczby podzielne przez 5 na Buzz,
-  3. Liczby podzielne przez 3 i 5 na BuzzFizz.
-  
+## Część B &ndash; zadania rozwiązywane samodzielnego
+
+### Zadania B1 &ndash; FizzBuzz
+Napisz już Ci znaną funkcję, która przyjmuje liczbę całkowitą. Funkcja wypisuje w kolejności liczby od 1 do podanej liczby, ale:
+  * w miejsce liczb podzielnych przez 3 wypisuje `Fizz`,
+  * w miejsce liczb podzielnych przez 5 wypisuje `Buzz`,
+  * w miejsce liczb podzielnych przez 3 i 5 wypisuje `BuzzFizz`.
+
+Na przykład dla argumentu ```x = 15``` wynik ma być następujący:
+  ```
+  12Fizz4BuzzFizz78FizzBuzz11Fizz1314FizzBuzz
+  ```
 Napisz testy do tej funkcji.
 
-### Ćwiczenie 2 - Rok Przestępny
-Napisz funkcję która przyjmuje liczbę całkowitą (oznaczającą rok) i zwraca true jeżeli rok jest przestępny, false jeżeli nie.
+### Zadanie B2 &ndash; rok przestępny
+Napisz funkcję, która przyjmuje liczbę całkowitą (oznaczającą rok) i zwraca `true` &ndash; jeżeli rok jest przestępny, `false` jeżeli nie.
 Napisz testy do tej funkcji.
 
-### Ćwiczenie 3 - Word wrap
-Napisz funkcjię ```wordWrap($string, $length)``` której zadaniem jest skrócić napis do podanej długości (dodając na końcu ```...```). Funkcja ma działać w taki sposób żeby żadne słowo nigdy nie zostało przecięte.
+### Zadanie B3 &ndash; Word wrap
+Napisz funkcję ```wordWrap($string, $length)```, której zadaniem jest skrócić napis do podanej długości (i dodanie na końcu ```...```). Funkcja ma działać w taki sposób żeby, żadne słowo nigdy nie zostało przecięte.
 Napisz testy do tej funkcji.
 
-### Ćwiczenie 4 - PrimeFactors
-Napisz klasę która będzie miała jedną statyczną metode ```generatePrimeFactors(n)``` która wygeneruje wszystkie dzielniki podanej liczby ```n``` w kolejności numerycznej (od najmniejszego). 
-Napisz to zadanie używając w pełni metodologii TDD.
 
-### Ćwiczenie 5 - Testowanie gotowego kodu
-W katalogu znajduje się skompresowany kod - zapoznaj się z nim. Jest to obiektowe rozwiązanie warsztatów. Napisz testy do tego kodu i odnajdź błędy.
+### Zadanie B4 &ndash; PrimeFactors
+Napisz klasę mającą jedną statyczną metodę ```generatePrimeFactors(n)```, która wygeneruje wszystkie dzielniki podanej liczby ```n``` w kolejności numerycznej (od najmniejszego).
+Do tego zadania użyj w pełni metodologii TDD.
 
-### Ćwiczenie 6 - Ankiety
-Napisz prosty system do tworzenia ankiet (chodzi tylko o backend – nie piszemy widoków). System ma być napisany w pełni obiektowo według podanych założeń:
+### Zadanie B5 &ndash; testowanie gotowego kodu
+W katalogu znajduje się skompresowany kod, zapoznaj się z nim. Jest to obiektowe rozwiązanie warsztatów. Napisz testy do tego kodu i odnajdź błędy.
+
+### Zadanie B6 &ndash; ankiety
+Napisz prosty system do tworzenia ankiet (chodzi tylko o back-end – nie pisz widoków). System ma być napisany w pełni obiektowo według poniższych założeń.
 
 Ankieta:
-  1. Ma posiadać własną nazwę, unikatowy link.
-  2. Ma implementować metody: zwracającą listę pytań dla danej ankiety, zwracanie nazwy, zmiana nazwy, zapisanie zmian do bazy danych.
-  3. Ma implementować statyczne metody: stworzenie nowej ankiety, wczytanie ankiety o podanym id z bazy danych, usunięcie ankiety o podanym id z bazy danych.
+1. Ma mieć własną nazwę, unikatowy link.
+2. Ma implementować następujące metody:
+  * zwracającą listę pytań dla danej ankiety,
+  * zwracanie nazwy,
+  * zmiana nazwy,
+  * zapisanie zmian do bazy danych.
+3. Ma implementować następujące statyczne metody:
+  * stworzenie nowej ankiety,
+  * wczytanie ankiety o podanym **id** z bazy danych,
+  * usunięcie ankiety o podanym **id** z bazy danych.
 
 Pytanie:
-  1. Ma posiadać tekst pytania.
-  2. Ma implementować metody: zwracającą wszystkie udzielone odpowiedzi na to pytanie, zmieniające tekst pytania, zwracające tekst pytania, zapamiętujące pytanie do bazy danych.
-  3. Ma implementować statyczne metody: stworzenie nowego pytania (potrzebuje podania id ankiety), wczytanie pytania o podanym id z bazy danych, usunięcie pytania o podanym id z bazy danych.
+1. Ma mieć tekst pytania.
+2. Ma implementować metody:
+ * zwracającą wszystkie udzielone odpowiedzi na to pytanie,
+ * zmieniające tekst pytania, zwracające tekst pytania,
+ * zapamiętujące pytanie do bazy danych.
+3. Ma implementować statyczne metody:
+ * stworzenie nowego pytania (potrzebuje podania **id** ankiety),
+ * wczytanie pytania o podanym **id** z bazy danych,
+ * usunięcie pytania o podanym **id** z bazy danych.
 
-Odpowiedz:
-  1. Ma posiadać tekst odpowiedzi.
-  2. Ma implementować metody: zmieniające tekst odpowiedzi, zwracające tekst odpowiedzi, zapamiętujące odpowiedź do bazy danych.
-  3. Ma implementować statyczne metody: stworzenie nowej odpowiedzi (potrzebuje podania id pytania), wczytanie odpowiedzi o podanym id z bazy danych, usunięcie odpowiedzi o podanym id z bazy danych.
+Odpowiedź:
+1. Ma mieć tekst odpowiedzi.
+2. Ma implementować metody:
+  * zmieniające tekst odpowiedzi,
+  * zwracające tekst odpowiedzi,
+  * zapamiętujące odpowiedź do bazy danych.
+3. Ma implementować statyczne metody:
+  * stworzenie nowej odpowiedzi (potrzebuje podania **id** pytania),
+  * wczytanie odpowiedzi o podanym **id** z bazy danych,
+  * usunięcie odpowiedzi o podanym **id** z bazy danych.
 
-Testy mają być pisane z użyciem ładowania odpowiednych fikstur do baz danych, mają być utworzone 4 grupy testowe: po jednej na każdą klasę i jedna testująca wszystko.
+Testy do zadania mają być pisane z użyciem ładowania odpowiednych fikstur do baz danych. mają być utworzone cztery grupy testowe, po jednej na każdą klasę i jedna testująca wszystko.
 
 
 <!-- Links -->
