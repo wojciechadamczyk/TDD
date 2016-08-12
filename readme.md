@@ -14,13 +14,40 @@ Wykonaj następujące kroki:
 
 **Każde zadanie powinno być rozwiązane w osobnym pliku**.
 
-## Cześć A &ndash; zadania rozwiązywane z wykładowcą
+## Cześć A &ndash; PHPUnit
 
-### Zadanie A1 &ndash; zamiana liczb na napisy
+### Zadanie A1 &ndash; zadania rozwiązywane z wykładowcą
 Napisz funkcję zamieniającą liczbę na zapis słowny tej liczby. Np. 143 zamieni na „sto czterdzieści trzy”. Liczby mają być w zakresie do tysiąca (ale bez tysiąca).
 Napisz testy do tej funkcji.
 
-### Zadanie A2 &ndash; kręgle
+### Zadania A2 &ndash; FizzBuzz
+Napisz już Ci znaną funkcję, która przyjmuje liczbę całkowitą. Funkcja wypisuje w kolejności liczby od 1 do podanej liczby, ale:
+  * w miejsce liczb podzielnych przez 3 wypisuje `Fizz`,
+  * w miejsce liczb podzielnych przez 5 wypisuje `Buzz`,
+  * w miejsce liczb podzielnych przez 3 i 5 wypisuje `BuzzFizz`.
+
+Na przykład dla argumentu ```x = 15``` wynik ma być następujący:
+  ```
+  12Fizz4BuzzFizz78FizzBuzz11Fizz1314FizzBuzz
+  ```
+Napisz testy do tej funkcji.
+
+### Zadanie A3 &ndash; rok przestępny
+Napisz funkcję, która przyjmuje liczbę całkowitą (oznaczającą rok) i zwraca `true` &ndash; jeżeli rok jest przestępny, `false` jeżeli nie.
+Napisz testy do tej funkcji.
+
+### Zadanie A4 &ndash; Word wrap
+Napisz funkcję ```wordWrap($string, $length)```, której zadaniem jest skrócić napis do podanej długości (i dodanie na końcu ```...```). Funkcja ma działać w taki sposób żeby, żadne słowo nigdy nie zostało przecięte.
+Napisz testy do tej funkcji.
+
+### Zadanie A5 &ndash; PrimeFactors
+Napisz klasę mającą jedną statyczną metodę ```generatePrimeFactors(n)```, która wygeneruje wszystkie dzielniki podanej liczby ```n``` w kolejności numerycznej (od najmniejszego).
+Do tego zadania użyj w pełni metodologii TDD.
+
+
+## Cześć B &ndash; TDD
+
+### Zadanie B1 &ndash; zadania rozwiązywane z wykładowcą
 Napisz klasę o nazwie ```BowlingGame``` służącą do podliczania wyników w grze w kręgle.
 Klasa ma mieć co najmniej dwie funkcje:
   1. ```roll(pins)``` &ndash; funkcja używana, gdy gracz rzuca,
@@ -45,7 +72,7 @@ Przed napisaniem klasy stwórz następujące przypadki testowe (ang. test case):
   5. Spare w pierwszej ramce (obojętnie jak zdobyty), potem w następnym rzucie 4, następnie 3 i reszta same pudła. Suma punktów powinna wynosić 21.
   6. Gra perfekcyjna (10 razy strike).
 
-### Zadanie A3 &ndash; klasa User
+### Zadanie B2 &ndash; klasa User
 Napisz klasę `User` implementującą następujące funkcjonalności:
   1. Rejestracje użytkownika.
   2. Logowanie.
@@ -54,37 +81,14 @@ Napisz klasę `User` implementującą następujące funkcjonalności:
 
 Napisz to zadanie, używając w pełni metodologii TDD. Pamiętaj o testowaniu danych wczytanych z fikstur.
 
-## Część B &ndash; zadania rozwiązywane samodzielnego
 
-### Zadania B1 &ndash; FizzBuzz
-Napisz już Ci znaną funkcję, która przyjmuje liczbę całkowitą. Funkcja wypisuje w kolejności liczby od 1 do podanej liczby, ale:
-  * w miejsce liczb podzielnych przez 3 wypisuje `Fizz`,
-  * w miejsce liczb podzielnych przez 5 wypisuje `Buzz`,
-  * w miejsce liczb podzielnych przez 3 i 5 wypisuje `BuzzFizz`.
-
-Na przykład dla argumentu ```x = 15``` wynik ma być następujący:
-  ```
-  12Fizz4BuzzFizz78FizzBuzz11Fizz1314FizzBuzz
-  ```
-Napisz testy do tej funkcji.
-
-### Zadanie B2 &ndash; rok przestępny
-Napisz funkcję, która przyjmuje liczbę całkowitą (oznaczającą rok) i zwraca `true` &ndash; jeżeli rok jest przestępny, `false` jeżeli nie.
-Napisz testy do tej funkcji.
-
-### Zadanie B3 &ndash; Word wrap
-Napisz funkcję ```wordWrap($string, $length)```, której zadaniem jest skrócić napis do podanej długości (i dodanie na końcu ```...```). Funkcja ma działać w taki sposób żeby, żadne słowo nigdy nie zostało przecięte.
-Napisz testy do tej funkcji.
-
-
-### Zadanie B4 &ndash; PrimeFactors
-Napisz klasę mającą jedną statyczną metodę ```generatePrimeFactors(n)```, która wygeneruje wszystkie dzielniki podanej liczby ```n``` w kolejności numerycznej (od najmniejszego).
-Do tego zadania użyj w pełni metodologii TDD.
-
-### Zadanie B5 &ndash; testowanie gotowego kodu
+### Zadanie B3 &ndash; testowanie gotowego kodu
 W katalogu znajduje się skompresowany kod, zapoznaj się z nim. Jest to obiektowe rozwiązanie warsztatów. Napisz testy do tego kodu i odnajdź błędy.
 
-### Zadanie B6 &ndash; ankiety
+
+## Cześć C &ndash; Testowanie baz danych
+
+### Zadanie C1 &ndash; ankiety
 Napisz prosty system do tworzenia ankiet (chodzi tylko o back-end – nie pisz widoków). System ma być napisany w pełni obiektowo według poniższych założeń.
 
 Ankieta:
