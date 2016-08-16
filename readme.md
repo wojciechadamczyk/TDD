@@ -92,38 +92,38 @@ W katalogu znajduje się skompresowany kod, zapoznaj się z nim. Jest to obiekto
 Napisz prosty system do tworzenia ankiet (chodzi tylko o back-end – nie pisz widoków). System ma być napisany w pełni obiektowo według poniższych założeń.
 
 Ankieta:
-1. Ma mieć własną nazwę, unikatowy link.
-2. Ma implementować następujące metody:
-  * zwracającą listę pytań dla danej ankiety,
-  * zwracanie nazwy,
-  * zmiana nazwy,
-  * zapisanie zmian do bazy danych.
-3. Ma implementować następujące statyczne metody:
-  * stworzenie nowej ankiety,
-  * wczytanie ankiety o podanym **id** z bazy danych,
-  * usunięcie ankiety o podanym **id** z bazy danych.
+  1. Ma mieć własną nazwę, unikatowy link.
+  2. Ma implementować następujące metody:
+    * zwracającą listę pytań dla danej ankiety,
+    * zwracanie nazwy,
+    * zmiana nazwy,
+    * zapisanie zmian do bazy danych.
+  3. Ma implementować następujące statyczne metody:
+    * stworzenie nowej ankiety,
+    * wczytanie ankiety o podanym **id** z bazy danych,
+    * usunięcie ankiety o podanym **id** z bazy danych.
 
 Pytanie:
-1. Ma mieć tekst pytania.
-2. Ma implementować metody:
- * zwracającą wszystkie udzielone odpowiedzi na to pytanie,
- * zmieniające tekst pytania, zwracające tekst pytania,
- * zapamiętujące pytanie do bazy danych.
-3. Ma implementować statyczne metody:
- * stworzenie nowego pytania (potrzebuje podania **id** ankiety),
- * wczytanie pytania o podanym **id** z bazy danych,
- * usunięcie pytania o podanym **id** z bazy danych.
+  1. Ma mieć tekst pytania.
+  2. Ma implementować metody:
+    * zwracającą wszystkie udzielone odpowiedzi na to pytanie,
+    * zmieniające tekst pytania, zwracające tekst pytania,
+    * zapamiętujące pytanie do bazy danych.
+  3. Ma implementować statyczne metody:
+    * stworzenie nowego pytania (potrzebuje podania **id** ankiety),
+    * wczytanie pytania o podanym **id** z bazy danych,
+    * usunięcie pytania o podanym **id** z bazy danych.
 
 Odpowiedź:
-1. Ma mieć tekst odpowiedzi.
-2. Ma implementować metody:
-  * zmieniające tekst odpowiedzi,
-  * zwracające tekst odpowiedzi,
-  * zapamiętujące odpowiedź do bazy danych.
-3. Ma implementować statyczne metody:
-  * stworzenie nowej odpowiedzi (potrzebuje podania **id** pytania),
-  * wczytanie odpowiedzi o podanym **id** z bazy danych,
-  * usunięcie odpowiedzi o podanym **id** z bazy danych.
+  1. Ma mieć tekst odpowiedzi.
+  2. Ma implementować metody:
+     * zmieniające tekst odpowiedzi,
+     * zwracające tekst odpowiedzi,
+     * zapamiętujące odpowiedź do bazy danych.
+  3. Ma implementować statyczne metody:
+     * stworzenie nowej odpowiedzi (potrzebuje podania **id** pytania),
+     * wczytanie odpowiedzi o podanym **id** z bazy danych,
+     * usunięcie odpowiedzi o podanym **id** z bazy danych.
 
 Testy do zadania mają być pisane z użyciem ładowania odpowiednych fikstur do baz danych. mają być utworzone cztery grupy testowe, po jednej na każdą klasę i jedna testująca wszystko.
 
