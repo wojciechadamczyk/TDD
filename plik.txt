@@ -1,0 +1,4 @@
+pierwsza linia pliku tekstowego
+druga linia pliku tekstowego
+trzecia linia
+

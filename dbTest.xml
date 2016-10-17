@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<database name="test2">
+	<table_data name="Ankieta">
+	<row>
+		<field name="id">1</field>
+		<field name="nazwa_ankiety">Nowa ankieta</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="nazwa_ankiety">Nowa ankieta</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="nazwa_ankiety">Nowa ankieta</field>
+	</row>
+	<row>
+		<field name="id">4</field>
+		<field name="nazwa_ankiety">Nowa ankieta</field>
+	</row>
+	<row>
+		<field name="id">5</field>
+		<field name="nazwa_ankiety">Nowa ankieta</field>
+	</row>
+	<row>
+		<field name="id">6</field>
+		<field name="nazwa_ankiety">Nowa ankieta</field>
+	</row>
+	<row>
+		<field name="id">7</field>
+		<field name="nazwa_ankiety">Nowa ankieta</field>
+	</row>
+	<row>
+		<field name="id">8</field>
+		<field name="nazwa_ankiety">Nowa ankieta</field>
+	</row>
+	<row>
+		<field name="id">9</field>
+		<field name="nazwa_ankiety">Nowa ankieta</field>
+	</row>
+	<row>
+		<field name="id">10</field>
+		<field name="nazwa_ankiety">Nowa ankieta</field>
+	</row>
+	<row>
+		<field name="id">11</field>
+		<field name="nazwa_ankiety">Nowa ankieta</field>
+	</row>
+	<row>
+		<field name="id">12</field>
+		<field name="nazwa_ankiety">Nowa ankieta</field>
+	</row>
+	<row>
+		<field name="id">13</field>
+		<field name="nazwa_ankiety">Nowa ankieta</field>
+	</row>
+	<row>
+		<field name="id">14</field>
+		<field name="nazwa_ankiety">Nowa ankieta</field>
+	</row>
+	<row>
+		<field name="id">15</field>
+		<field name="nazwa_ankiety">Nowa ankieta</field>
+	</row>
+	<row>
+		<field name="id">16</field>
+		<field name="nazwa_ankiety">Nowa ankieta</field>
+	</row>
+	<row>
+		<field name="id">17</field>
+		<field name="nazwa_ankiety">Nowa ankieta</field>
+	</row>
+	<row>
+		<field name="id">18</field>
+		<field name="nazwa_ankiety">Nowa nazwa ankiety</field>
+	</row>
+	<row>
+		<field name="id">19</field>
+		<field name="nazwa_ankiety">Nowa nazwa ankiety</field>
+	</row>
+	<row>
+		<field name="id">20</field>
+		<field name="nazwa_ankiety">Nowa nazwa ankiety</field>
+	</row>
+	</table_data>
+	<table_data name="Odpowiedz">
+	</table_data>
+	<table_data name="Pytania">
+	</table_data>
+	<table_data name="users">
+	<row>
+		<field name="id">1</field>
+		<field name="username">uzytkownik1</field>
+		<field name="password">haslo1</field>
+	</row>
+	<row>
+		<field name="id">2</field>
+		<field name="username">uzytkownik2</field>
+		<field name="password">haslo2</field>
+	</row>
+	<row>
+		<field name="id">3</field>
+		<field name="username">uzytkownik3</field>
+		<field name="password">haslo3</field>
+	</row>
+	</table_data>
+</database>
+</mysqldump>

@@ -1,0 +1,71 @@
+{
+    "event": "suiteStart",
+    "suite": "zadaniea5Test",
+    "tests": 4
+}{
+    "event": "testStart",
+    "suite": "zadaniea5Test",
+    "test": "zadaniea5Test::testJedynka"
+}{
+    "event": "test",
+    "suite": "zadaniea5Test",
+    "test": "zadaniea5Test::testJedynka",
+    "status": "pass",
+    "time": 0.0023360252380371,
+    "trace": [
+
+    ],
+    "message": "",
+    "output": "setUp\n\ntearDown()"
+}{
+    "event": "testStart",
+    "suite": "zadaniea5Test",
+    "test": "zadaniea5Test::testOstatniaWartosc"
+}{
+    "event": "test",
+    "suite": "zadaniea5Test",
+    "test": "zadaniea5Test::testOstatniaWartosc",
+    "status": "pass",
+    "time": 0.0010559558868408,
+    "trace": [
+
+    ],
+    "message": "",
+    "output": "setUp\n\ntearDown()"
+}{
+    "event": "testStart",
+    "suite": "zadaniea5Test",
+    "test": "zadaniea5Test::testPoprawnoscizawartosci"
+}{
+    "event": "test",
+    "suite": "zadaniea5Test",
+    "test": "zadaniea5Test::testPoprawnoscizawartosci",
+    "status": "pass",
+    "time": 0.00087308883666992,
+    "trace": [
+
+    ],
+    "message": "",
+    "output": "setUp\n\ntearDown()"
+}{
+    "event": "testStart",
+    "suite": "zadaniea5Test",
+    "test": "zadaniea5Test::testDlugosci"
+}{
+    "event": "test",
+    "suite": "zadaniea5Test",
+    "test": "zadaniea5Test::testDlugosci",
+    "status": "error",
+    "time": 0.0016329288482666,
+    "trace": [
+        {
+            "file": "\/home\/wojtek\/Workspace\/PhpUNIT\/TDD\/test\/zadaniea5Test.php",
+            "line": 50,
+            "function": "markTestIncomplete",
+            "class": "PHPUnit_Framework_Assert",
+            "type": "::"
+        }
+    ],
+    "message": "Incomplete Test: ",
+    "output": "setUp\n\ntearDown()"
+}
